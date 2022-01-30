@@ -1,6 +1,7 @@
 const express = require('express');
+const config = require('config');
 const app = express();
-const port = 3000;
+const port = config.get('PORT') || 3000;
 const newsRoutes = require('../router/news');
 const corsMiddleware = require('../middleware/cors');
 
